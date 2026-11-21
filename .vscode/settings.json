@@ -1,0 +1,13 @@
+{
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": ["-g", "%DOC%"]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        { "name": "latexmk (LuaLaTeX)", "tools": ["latexmk"] }
+    ],
+    "editor.wordWrap": "on"
+}

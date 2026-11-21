@@ -1,0 +1,71 @@
+% Example document for the travelbook class.
+% Compile with:  latexmk example.tex   (or through Docker, see README.md)
+%
+% Language: a class option (english, italian, french, german, spanish).
+\documentclass[english]{travelbook}
+
+% The choices for this book. All optional.
+\travelsetup{
+  palette    = sea,           % sea, jungle, ink, sunset
+  binding    = 5mm,           % added to the inner margin
+  bleed      = 0mm,           % for the print shop: usually 3mm
+  cropmarks  = false,         % crop marks, only with bleed
+  showpaths  = true,          % placeholders print where the photo goes
+  coverphoto = photos/cover,  % no extension: tries .jpg, .jpeg, .png, .pdf
+}
+% Custom colours instead of a preset: primary, secondary, accent, paper, text
+% \setcolors{1F4E5F}{4F8A8B}{E07A5F}{F2EADF}{222B2E}
+
+\title{Three Days on the Riviera}
+\subtitle{An example for the template}
+\author{Anna and Luke}
+\date{12 – 14 May 2028}
+\dedication{To whoever lent us the car.}
+
+\begin{document}
+
+\makecover
+\maketitlepage
+\contentspage
+
+\begin{itinerary}
+  \stage{12 May}{Genoa}{Arrival by train, the old town and focaccia.}
+  \stage{13 May}{Camogli}{The village, then on foot to San Fruttuoso.}
+  \stage{14 May}{Portofino}{The lighthouse and the way home.}
+\end{itinerary}
+
+\tripmap{photos/map}{The route, from Genoa to Portofino}
+
+\trippart{Liguria}{The sea out of season}
+
+\tripstop[photos/stops/genoa]{Genoa}{The port and the alleys · 12 May}
+
+\tripday{Friday 12 May}{Genoa}{Arrival}
+We reach Brignole mid-morning and head straight for the old port. The first
+thought is focaccia, still warm, eaten standing on the quay.
+
+\sight{The caruggi}
+Narrow alleys, washing hung out to dry, shops that seem to have stopped a century
+ago. We get lost on purpose and find the way back by following the smell of the sea.
+
+\photogrid[2]{
+  \photo{photos/2028-05-12/alley-1}{The first alley}
+  \photo{photos/2028-05-12/alley-2}{Washing in the sun}
+}
+
+\sight{The Lanterna}
+The tallest lighthouse in the Mediterranean, seen at sunset from the pier.
+
+\photo{photos/2028-05-12/lanterna}{The Lanterna at sunset}
+
+\memory{4}
+
+\tripday{Saturday 13 May}{Camogli}{The painted houses}
+A regional train to Camogli, then the path to San Fruttuoso: two hours among holm
+oaks and glimpses of the sea, and the abbey appearing out of nowhere.
+
+\photoslots[3]{photos/2028-05-13}{6}
+
+\notespage[Things not to forget]
+
+\end{document}

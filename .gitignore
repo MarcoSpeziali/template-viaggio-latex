@@ -1,0 +1,20 @@
+# LaTeX build files
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.synctex.gz
+*.synctex(busy)
+*.xdv
+
+# Built PDFs (rebuild with latexmk)
+*.pdf
+
+# macOS
+.DS_Store

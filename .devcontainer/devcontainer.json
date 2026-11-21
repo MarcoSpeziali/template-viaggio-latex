@@ -1,0 +1,9 @@
+{
+    "name": "Travel book (TeX Live)",
+    "dockerFile": "Dockerfile",
+    "customizations": {
+        "vscode": {
+            "extensions": ["james-yu.latex-workshop"]
+        }
+    }
+}
