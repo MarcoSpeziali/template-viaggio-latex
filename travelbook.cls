@@ -425,7 +425,8 @@
 \newcommand\contentspage{%
   \cleardoublepage
   \begingroup\pagestyle{travel-plain}\markboth{}{}%
-  \tableofcontents*\clearpage\endgroup}
+  \tableofcontents*\clearpage\endgroup
+  \markboth{}{}}
 
 % ---------------------------------------------------------------- parts, stops, days
 %% \trippart{Title}{subtitle}: a full-bleed page in the primary colour.
@@ -521,6 +522,14 @@
   \par\addvspace{5mm}%
   \noindent{\color{tb-secondary}\small\spaced{#1}}\par\vspace{4mm}%
   \writinglines{#2}}
+%% \memoryfill[title]: a label and ruled lines down to the foot of the page, then a
+%% page break. With less than about four lines left it starts on a new page, so a
+%% day never ends with a lonely scrap of lines.
+\NewDocumentCommand\memoryfill{O{\memoryname}}{%
+  \par\needspace{42mm}\addvspace{5mm}%
+  \noindent{\color{tb-secondary}\small\spaced{#1}}\par\vspace{1mm}%
+  \leaders\vbox to 8mm{\vss\noindent{\color{tb-secondary!45}\rule{\linewidth}{.35pt}}}\vfill
+  \clearpage}
 %% \notespage[title]: one full page of ruled lines, as many as fit.
 \NewDocumentCommand\notespage{O{\notesname}}{%
   \clearpage

@@ -128,6 +128,7 @@ redefine, e.g. `\renewcommand\memoryname{A note}`.
 | Command | Result |
 |---|---|
 | `\memory[title]{n}` | `n` ruled lines under a small label ("Today's memory"). |
+| `\memoryfill[title]` | The same label, then ruled lines down to the foot of the page (new page if fewer than four would fit). |
 | `\writinglines{n}` | `n` ruled lines. |
 | `\notespage[title]` | A whole page of ruled lines. |
 
